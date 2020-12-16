@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BD857FC258A961E007D0515 /* DebugLights.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9BD857FA258A961E007D0515 /* DebugLights.metal */; };
+		9BD857FD258A961E007D0515 /* DebugLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD857FB258A961E007D0515 /* DebugLights.swift */; };
 		9BF0874825896E0B0042094D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0874725896E0B0042094D /* AppDelegate.swift */; };
 		9BF0874A25896E0B0042094D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0874925896E0B0042094D /* ViewController.swift */; };
 		9BF0874C25896E0E0042094D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0874B25896E0E0042094D /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9BD857FA258A961E007D0515 /* DebugLights.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DebugLights.metal; sourceTree = "<group>"; };
+		9BD857FB258A961E007D0515 /* DebugLights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLights.swift; sourceTree = "<group>"; };
 		9BF0874425896E0B0042094D /* Rendering Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rendering Engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF0874725896E0B0042094D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF0874925896E0B0042094D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				9BF0878E258971460042094D /* MathLibrary.swift */,
+				9BD857FA258A961E007D0515 /* DebugLights.metal */,
+				9BD857FB258A961E007D0515 /* DebugLights.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -226,11 +232,13 @@
 				9BF08773258970D50042094D /* VertexDescriptor.swift in Sources */,
 				9BF0875A25896F6D0042094D /* Renderer.swift in Sources */,
 				9BF08764258970BE0042094D /* Node.swift in Sources */,
+				9BD857FC258A961E007D0515 /* DebugLights.metal in Sources */,
 				9BF0874825896E0B0042094D /* AppDelegate.swift in Sources */,
 				9BF08767258970C30042094D /* Camera.swift in Sources */,
 				9BF0876D258970CC0042094D /* Mesh.swift in Sources */,
 				9BF08770258970D10042094D /* Submesh.swift in Sources */,
 				9BF08760258970B60042094D /* Primitive.swift in Sources */,
+				9BD857FD258A961E007D0515 /* DebugLights.swift in Sources */,
 				9BF0876A258970C70042094D /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
