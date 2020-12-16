@@ -9,13 +9,19 @@ import MetalKit
 
 class ViewController: NSViewController {
     
+    // MARK: - Outlets
+    @IBOutlet weak var metalView: MTKView!
+    
+    // MARK: - Variables
     var renderer: Renderer?
     
+    // MARK: - Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let metalView = view as? MTKView else {
-            fatalError("metal view not set up in storyboard")
-        }
+        initConfigure()
+    }
+    
+    private func initConfigure() {
         renderer = Renderer(metalView: metalView)
         addGestureRecognizers(to: metalView)
     }
