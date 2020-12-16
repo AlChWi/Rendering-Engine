@@ -11,6 +11,26 @@
 		9BF0874A25896E0B0042094D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0874925896E0B0042094D /* ViewController.swift */; };
 		9BF0874C25896E0E0042094D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0874B25896E0E0042094D /* Assets.xcassets */; };
 		9BF0874F25896E0E0042094D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0874D25896E0E0042094D /* Main.storyboard */; };
+		9BF0875A25896F6D0042094D /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0875925896F6D0042094D /* Renderer.swift */; };
+		9BF0875D258970700042094D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0875C258970700042094D /* Shaders.metal */; };
+		9BF08760258970B60042094D /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0875F258970B60042094D /* Primitive.swift */; };
+		9BF08764258970BE0042094D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF08763258970BE0042094D /* Node.swift */; };
+		9BF08767258970C30042094D /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF08766258970C30042094D /* Camera.swift */; };
+		9BF0876A258970C70042094D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF08769258970C70042094D /* Model.swift */; };
+		9BF0876D258970CC0042094D /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0876C258970CC0042094D /* Mesh.swift */; };
+		9BF08770258970D10042094D /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0876F258970D10042094D /* Submesh.swift */; };
+		9BF08773258970D50042094D /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF08772258970D50042094D /* VertexDescriptor.swift */; };
+		9BF08780258971300042094D /* portal.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9BF08776258971300042094D /* portal.mtl */; };
+		9BF08781258971300042094D /* treefir.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9BF08777258971300042094D /* treefir.mtl */; };
+		9BF08782258971300042094D /* magic.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9BF08778258971300042094D /* magic.mtl */; };
+		9BF08783258971300042094D /* stairs.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9BF08779258971300042094D /* stairs.mtl */; };
+		9BF08784258971300042094D /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877A258971300042094D /* train.obj */; };
+		9BF08785258971300042094D /* treefir.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877B258971300042094D /* treefir.obj */; };
+		9BF08786258971300042094D /* magic.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877C258971300042094D /* magic.obj */; };
+		9BF08787258971300042094D /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877D258971300042094D /* train.mtl */; };
+		9BF08788258971300042094D /* stairs.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877E258971300042094D /* stairs.obj */; };
+		9BF08789258971300042094D /* portal.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877F258971300042094D /* portal.obj */; };
+		9BF08791258971460042094D /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0878E258971460042094D /* MathLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +41,27 @@
 		9BF0874E25896E0E0042094D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BF0875025896E0E0042094D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF0875125896E0E0042094D /* Rendering_Engine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rendering_Engine.entitlements; sourceTree = "<group>"; };
+		9BF0875925896F6D0042094D /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		9BF0875C258970700042094D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		9BF0875F258970B60042094D /* Primitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
+		9BF08762258970BA0042094D /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		9BF08763258970BE0042094D /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		9BF08766258970C30042094D /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		9BF08769258970C70042094D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9BF0876C258970CC0042094D /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		9BF0876F258970D10042094D /* Submesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
+		9BF08772258970D50042094D /* VertexDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
+		9BF08776258971300042094D /* portal.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal.mtl; sourceTree = "<group>"; };
+		9BF08777258971300042094D /* treefir.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = treefir.mtl; sourceTree = "<group>"; };
+		9BF08778258971300042094D /* magic.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = magic.mtl; sourceTree = "<group>"; };
+		9BF08779258971300042094D /* stairs.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stairs.mtl; sourceTree = "<group>"; };
+		9BF0877A258971300042094D /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
+		9BF0877B258971300042094D /* treefir.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = treefir.obj; sourceTree = "<group>"; };
+		9BF0877C258971300042094D /* magic.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = magic.obj; sourceTree = "<group>"; };
+		9BF0877D258971300042094D /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
+		9BF0877E258971300042094D /* stairs.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stairs.obj; sourceTree = "<group>"; };
+		9BF0877F258971300042094D /* portal.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal.obj; sourceTree = "<group>"; };
+		9BF0878E258971460042094D /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +94,51 @@
 		9BF0874625896E0B0042094D /* Rendering Engine */ = {
 			isa = PBXGroup;
 			children = (
+				9BF0878B258971460042094D /* Utility */,
+				9BF08775258971300042094D /* Models */,
 				9BF0874725896E0B0042094D /* AppDelegate.swift */,
 				9BF0874925896E0B0042094D /* ViewController.swift */,
+				9BF0875925896F6D0042094D /* Renderer.swift */,
+				9BF0875C258970700042094D /* Shaders.metal */,
+				9BF0875F258970B60042094D /* Primitive.swift */,
+				9BF08762258970BA0042094D /* Common.h */,
+				9BF08763258970BE0042094D /* Node.swift */,
+				9BF08766258970C30042094D /* Camera.swift */,
+				9BF08769258970C70042094D /* Model.swift */,
+				9BF0876C258970CC0042094D /* Mesh.swift */,
+				9BF0876F258970D10042094D /* Submesh.swift */,
+				9BF08772258970D50042094D /* VertexDescriptor.swift */,
 				9BF0874B25896E0E0042094D /* Assets.xcassets */,
 				9BF0874D25896E0E0042094D /* Main.storyboard */,
 				9BF0875025896E0E0042094D /* Info.plist */,
 				9BF0875125896E0E0042094D /* Rendering_Engine.entitlements */,
 			);
 			path = "Rendering Engine";
+			sourceTree = "<group>";
+		};
+		9BF08775258971300042094D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BF08776258971300042094D /* portal.mtl */,
+				9BF08777258971300042094D /* treefir.mtl */,
+				9BF08778258971300042094D /* magic.mtl */,
+				9BF08779258971300042094D /* stairs.mtl */,
+				9BF0877A258971300042094D /* train.obj */,
+				9BF0877B258971300042094D /* treefir.obj */,
+				9BF0877C258971300042094D /* magic.obj */,
+				9BF0877D258971300042094D /* train.mtl */,
+				9BF0877E258971300042094D /* stairs.obj */,
+				9BF0877F258971300042094D /* portal.obj */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BF0878B258971460042094D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9BF0878E258971460042094D /* MathLibrary.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,8 +198,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF08786258971300042094D /* magic.obj in Resources */,
+				9BF08780258971300042094D /* portal.mtl in Resources */,
+				9BF08784258971300042094D /* train.obj in Resources */,
+				9BF08782258971300042094D /* magic.mtl in Resources */,
 				9BF0874C25896E0E0042094D /* Assets.xcassets in Resources */,
+				9BF08788258971300042094D /* stairs.obj in Resources */,
+				9BF08783258971300042094D /* stairs.mtl in Resources */,
+				9BF08787258971300042094D /* train.mtl in Resources */,
+				9BF08785258971300042094D /* treefir.obj in Resources */,
+				9BF08789258971300042094D /* portal.obj in Resources */,
 				9BF0874F25896E0E0042094D /* Main.storyboard in Resources */,
+				9BF08781258971300042094D /* treefir.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +220,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF0875D258970700042094D /* Shaders.metal in Sources */,
+				9BF08791258971460042094D /* MathLibrary.swift in Sources */,
 				9BF0874A25896E0B0042094D /* ViewController.swift in Sources */,
+				9BF08773258970D50042094D /* VertexDescriptor.swift in Sources */,
+				9BF0875A25896F6D0042094D /* Renderer.swift in Sources */,
+				9BF08764258970BE0042094D /* Node.swift in Sources */,
 				9BF0874825896E0B0042094D /* AppDelegate.swift in Sources */,
+				9BF08767258970C30042094D /* Camera.swift in Sources */,
+				9BF0876D258970CC0042094D /* Mesh.swift in Sources */,
+				9BF08770258970D10042094D /* Submesh.swift in Sources */,
+				9BF08760258970B60042094D /* Primitive.swift in Sources */,
+				9BF0876A258970C70042094D /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +306,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Rendering Engine/Common.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -262,6 +361,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Rendering Engine/Common.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
