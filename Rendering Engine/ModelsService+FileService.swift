@@ -19,26 +19,26 @@ class ModelsService {
     func fetchModels() {
         models = []
         DocumentService.checkCreateModelsDirectory()
-        let modelsURLs = FileManager.default.subpaths(atPath: DocumentService.getModelsDirectory().absoluteString)
-        modelsURLs?.forEach { modelURLString in
-            guard let modelURL = URL(string: modelURLString),
-                  let modelName = modelURL.pathComponents.last else { return }
+        var modelsNames = FileManager.default.subpaths(atPath: DocumentService.getModelsDirectory().absoluteString)
+        modelsNames = modelsNames?.filter({ $0.hasSuffix(".obj") })
+        modelsNames?.forEach { modelName in
+            let modelURL = DocumentService.getModelsDirectory().appendingPathComponent(modelName)
             models.append(Model(assetUrl: modelURL, modelName: modelName))
         }
     }
     
-    func saveModelData(name: String, fileData: Data) {
+    func saveModelData(fileName: String, fileData: Data) {
         DocumentService.checkCreateModelsDirectory()
-        FileManager.default.createFile(atPath: DocumentService.getModelsDirectory().appendingPathComponent("\(name).obj").absoluteString,
+        FileManager.default.createFile(atPath: DocumentService.getModelsDirectory().appendingPathComponent(fileName).absoluteString,
                                        contents: fileData,
-                                       attributes: [.type:"obj"])
+                                       attributes: nil)
     }
     
     func addNewModel(name: String, fileUrl: URL) {
         do {
             let modelData = try Data(contentsOf: fileUrl)
-            saveModelData(name: name, fileData: modelData)
-            models.append(Model(assetUrl: DocumentService.getModelsDirectory().appendingPathComponent("\(name).obj"), modelName: "\(name).obj"))
+            saveModelData(fileName: fileUrl.pathComponents.last ?? name, fileData: modelData)
+            models.append(Model(assetUrl: DocumentService.getModelsDirectory().appendingPathComponent(fileUrl.pathComponents.last ?? name), modelName: name))
         } catch {
             print(error.localizedDescription)
         }
@@ -58,7 +58,7 @@ class ModelsService {
 
 enum DocumentService {
     static func getDocumentsDirectory() -> URL {
-        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return URL(string: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path)!
     }
     
     static func getModelsDirectory() -> URL {
