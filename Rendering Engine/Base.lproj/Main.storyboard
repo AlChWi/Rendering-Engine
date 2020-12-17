@@ -890,6 +890,9 @@
                     </view>
                     <connections>
                         <outlet property="metalView" destination="fQa-wM-12O" id="RxL-Q3-61s"/>
+                        <outlet property="modelsCollectionView" destination="iiQ-G6-hzE" id="8nk-zL-Yzv"/>
+                        <outlet property="sceneItemsTableView" destination="JcE-7I-8FV" id="3ab-vC-3eq"/>
+                        <outlet property="settingsOutlineView" destination="02j-iH-edQ" id="fQt-LL-4Q5"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

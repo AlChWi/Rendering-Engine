@@ -7,23 +7,19 @@ class Model: Node {
   let pipelineState: MTLRenderPipelineState
   let meshes: [Mesh]
   
-  init(name: String) {
-    guard
-      let assetUrl = Bundle.main.url(forResource: name, withExtension: nil) else {
-        fatalError("Model: \(name) not found")
-    }
-    let allocator = MTKMeshBufferAllocator(device: Renderer.device)
-    let asset = MDLAsset(url: assetUrl,
-                         vertexDescriptor: MDLVertexDescriptor.defaultVertexDescriptor,
-                         bufferAllocator: allocator)
-    let (mdlMeshes, mtkMeshes) = try! MTKMesh.newMeshes(asset: asset,
-                                                        device: Renderer.device)
-    meshes = zip(mdlMeshes, mtkMeshes).map {
-      Mesh(mdlMesh: $0.0, mtkMesh: $0.1)
-    }
-    pipelineState = Model.buildPipelineState()
-    super.init()
-    self.name = name
+    init(assetUrl: URL, modelName: String) {
+        let allocator = MTKMeshBufferAllocator(device: Renderer.device)
+        let asset = MDLAsset(url: assetUrl,
+                             vertexDescriptor: MDLVertexDescriptor.defaultVertexDescriptor,
+                             bufferAllocator: allocator)
+        let (mdlMeshes, mtkMeshes) = try! MTKMesh.newMeshes(asset: asset,
+                                                            device: Renderer.device)
+        meshes = zip(mdlMeshes, mtkMeshes).map {
+            Mesh(mdlMesh: $0.0, mtkMesh: $0.1)
+        }
+        pipelineState = Model.buildPipelineState()
+        super.init()
+        self.name = modelName
   }
   
   private static func buildPipelineState() -> MTLRenderPipelineState {

@@ -86,16 +86,8 @@ class Renderer: NSObject {
         metalView.delegate = self
         
         // add the model to the scene
-        let stairs = Model(name: "stairs.obj")
-        let portal = Model(name: "portal.obj")
-        let magic = Model(name: "magic.obj")
-        models.append(stairs)
-        models.append(portal)
-        models.append(magic)
-        lights.append(sunlight)
-        lights.append(ambientLight)
-        lights.append(pointLight)
-        lights.append(spotLight)
+        ModelsService.shared.fetchDefaultModels()
+        models.append(contentsOf: ModelsService.shared.models)
         
         fragmentUniforms.lightCouunt = UInt32(lights.count)
         mtkView(metalView, drawableSizeWillChange: metalView.bounds.size)

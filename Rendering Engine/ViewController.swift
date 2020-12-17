@@ -11,6 +11,9 @@ class ViewController: NSViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var metalView: MTKView!
+    @IBOutlet weak var modelsCollectionView: NSCollectionView!
+    @IBOutlet weak var sceneItemsTableView: NSTableView!
+    @IBOutlet weak var settingsOutlineView: NSOutlineView!
     
     // MARK: - Variables
     var renderer: Renderer?
@@ -23,6 +26,12 @@ class ViewController: NSViewController {
     
     private func initConfigure() {
         renderer = Renderer(metalView: metalView)
+        modelsCollectionView.dataSource = self
+        modelsCollectionView.delegate = self
+        sceneItemsTableView.dataSource = self
+        sceneItemsTableView.delegate = self
+        settingsOutlineView.dataSource = self
+        settingsOutlineView.delegate = self
         addGestureRecognizers(to: metalView)
     }
 }
@@ -45,4 +54,22 @@ extension ViewController {
     override func scrollWheel(with event: NSEvent) {
         renderer?.camera.zoom(delta: Float(event.deltaY))
     }
+}
+
+extension ViewController: NSCollectionViewDataSource, NSCollectionViewDelegate {
+    func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
+        return NSCollectionViewItem()
+    }
+}
+
+extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
+    
+}
+
+extension ViewController: NSOutlineViewDataSource, NSOutlineViewDelegate {
+    
 }

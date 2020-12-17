@@ -33,6 +33,7 @@
 		9BF08788258971300042094D /* stairs.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877E258971300042094D /* stairs.obj */; };
 		9BF08789258971300042094D /* portal.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877F258971300042094D /* portal.obj */; };
 		9BF08791258971460042094D /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0878E258971460042094D /* MathLibrary.swift */; };
+		CE53E858258B87F0007B2EF2 /* ModelsService+FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		9BF0877E258971300042094D /* stairs.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stairs.obj; sourceTree = "<group>"; };
 		9BF0877F258971300042094D /* portal.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal.obj; sourceTree = "<group>"; };
 		9BF0878E258971460042094D /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
+		CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelsService+FileService.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9BF08775258971300042094D /* Models */,
 				9BF0874725896E0B0042094D /* AppDelegate.swift */,
 				9BF0874925896E0B0042094D /* ViewController.swift */,
+				CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */,
 				9BF0875925896F6D0042094D /* Renderer.swift */,
 				9BF0875C258970700042094D /* Shaders.metal */,
 				9BF0875F258970B60042094D /* Primitive.swift */,
@@ -234,6 +237,7 @@
 				9BF08764258970BE0042094D /* Node.swift in Sources */,
 				9BD857FC258A961E007D0515 /* DebugLights.metal in Sources */,
 				9BF0874825896E0B0042094D /* AppDelegate.swift in Sources */,
+				CE53E858258B87F0007B2EF2 /* ModelsService+FileService.swift in Sources */,
 				9BF08767258970C30042094D /* Camera.swift in Sources */,
 				9BF0876D258970CC0042094D /* Mesh.swift in Sources */,
 				9BF08770258970D10042094D /* Submesh.swift in Sources */,
