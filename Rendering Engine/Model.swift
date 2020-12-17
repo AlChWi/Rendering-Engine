@@ -6,6 +6,7 @@ class Model: Node {
   
   let pipelineState: MTLRenderPipelineState
   let meshes: [Mesh]
+  let modelURL: URL
   
     init(assetUrl: URL, modelName: String) {
         let allocator = MTKMeshBufferAllocator(device: Renderer.device)
@@ -18,6 +19,7 @@ class Model: Node {
             Mesh(mdlMesh: $0.0, mtkMesh: $0.1)
         }
         pipelineState = Model.buildPipelineState()
+        self.modelURL = assetUrl
         super.init()
         self.name = modelName
   }

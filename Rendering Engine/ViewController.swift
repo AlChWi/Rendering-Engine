@@ -18,6 +18,8 @@ class ViewController: NSViewController {
     // MARK: - Variables
     var renderer: Renderer?
     
+    private var savedModelsCollection: [Model] = []
+    
     // MARK: - Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class ViewController: NSViewController {
     
     private func initConfigure() {
         renderer = Renderer(metalView: metalView)
+        ModelsService.shared.fetchModels()
+        savedModelsCollection.append(contentsOf: ModelsService.shared.models)
         modelsCollectionView.dataSource = self
         modelsCollectionView.delegate = self
         sceneItemsTableView.dataSource = self
@@ -33,6 +37,12 @@ class ViewController: NSViewController {
         settingsOutlineView.dataSource = self
         settingsOutlineView.delegate = self
         addGestureRecognizers(to: metalView)
+        let flowLayout = NSCollectionViewFlowLayout()
+        flowLayout.itemSize = NSSize(width: 160.0, height: 140.0)
+        flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+        flowLayout.minimumInteritemSpacing = 20.0
+        flowLayout.minimumLineSpacing = 20.0
+        modelsCollectionView.collectionViewLayout = flowLayout
     }
 }
 
@@ -58,11 +68,31 @@ extension ViewController {
 
 extension ViewController: NSCollectionViewDataSource, NSCollectionViewDelegate {
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return savedModelsCollection.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        return NSCollectionViewItem()
+        guard let cell = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ModelPreview"), for: indexPath) as? ModelPreview else { fatalError("failed to reuse ModelPreview") }
+        
+        cell.configure(with: savedModelsCollection[indexPath.item])
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        indexPaths.forEach { indexPath in
+            collectionView.item(at: indexPath)?.view.layer?.backgroundColor = .init(red: 255, green: 255, blue: 255, alpha: 0.4)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            collectionView.deselectItems(at: indexPaths)
+            collectionView.delegate?.collectionView?(collectionView, didDeselectItemsAt: indexPaths)
+        }
+    }
+
+    func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
+        indexPaths.forEach { indexPath in
+            collectionView.item(at: indexPath)?.view.layer?.backgroundColor = .clear
+        }
     }
 }
 

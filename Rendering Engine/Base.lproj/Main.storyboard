@@ -719,10 +719,10 @@
                                     <rect key="frame" x="1" y="1" width="1078" height="158"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="iiQ-G6-hzE">
+                                        <collectionView selectable="YES" allowsEmptySelection="NO" id="iiQ-G6-hzE">
                                             <rect key="frame" x="0.0" y="0.0" width="1078" height="158"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="pAA-gy-5PR">
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" scrollDirection="horizontal" id="pAA-gy-5PR">
                                                 <size key="itemSize" width="50" height="50"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>

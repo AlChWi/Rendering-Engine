@@ -34,6 +34,8 @@
 		9BF08789258971300042094D /* portal.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877F258971300042094D /* portal.obj */; };
 		9BF08791258971460042094D /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0878E258971460042094D /* MathLibrary.swift */; };
 		CE53E858258B87F0007B2EF2 /* ModelsService+FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */; };
+		CE53E86A258BB534007B2EF2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53E868258BB534007B2EF2 /* ModelPreview.swift */; };
+		CE53E86B258BB534007B2EF2 /* ModelPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE53E869258BB534007B2EF2 /* ModelPreview.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		9BF0877F258971300042094D /* portal.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal.obj; sourceTree = "<group>"; };
 		9BF0878E258971460042094D /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
 		CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelsService+FileService.swift"; sourceTree = "<group>"; };
+		CE53E868258BB534007B2EF2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
+		CE53E869258BB534007B2EF2 /* ModelPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelPreview.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				9BF0874D25896E0E0042094D /* Main.storyboard */,
 				9BF0875025896E0E0042094D /* Info.plist */,
 				9BF0875125896E0E0042094D /* Rendering_Engine.entitlements */,
+				CE53E868258BB534007B2EF2 /* ModelPreview.swift */,
+				CE53E869258BB534007B2EF2 /* ModelPreview.xib */,
 			);
 			path = "Rendering Engine";
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				9BF08787258971300042094D /* train.mtl in Resources */,
 				9BF08785258971300042094D /* treefir.obj in Resources */,
 				9BF08789258971300042094D /* portal.obj in Resources */,
+				CE53E86B258BB534007B2EF2 /* ModelPreview.xib in Resources */,
 				9BF0874F25896E0E0042094D /* Main.storyboard in Resources */,
 				9BF08781258971300042094D /* treefir.mtl in Resources */,
 			);
@@ -244,6 +251,7 @@
 				9BF08760258970B60042094D /* Primitive.swift in Sources */,
 				9BD857FD258A961E007D0515 /* DebugLights.swift in Sources */,
 				9BF0876A258970C70042094D /* Model.swift in Sources */,
+				CE53E86A258BB534007B2EF2 /* ModelPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
