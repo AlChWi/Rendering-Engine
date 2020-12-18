@@ -88,6 +88,10 @@ class Renderer: NSObject {
         // add the model to the scene
         ModelsService.shared.fetchDefaultModels()
         models.append(contentsOf: ModelsService.shared.models)
+        lights.append(sunlight)
+        lights.append(ambientLight)
+        lights.append(pointLight)
+        lights.append(spotLight)
         
         fragmentUniforms.lightCouunt = UInt32(lights.count)
         mtkView(metalView, drawableSizeWillChange: metalView.bounds.size)
