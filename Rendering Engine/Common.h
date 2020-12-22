@@ -1,5 +1,3 @@
-
-
 #ifndef Common_h
 #define Common_h
 
@@ -33,8 +31,25 @@ typedef struct {
 } Light;
 
 typedef struct {
-    uint lightCouunt;
+    uint lightCount;
     vector_float3 cameraPosition;
+    uint tiling;
 } FragmentUniforms;
 
+typedef enum {
+    Position = 0,
+    Normal = 1,
+    UV = 2
+} Attributes;
+
+typedef enum {
+    BufferIndexVertices = 0,
+    BufferIndexUniforms = 1,
+    BufferIndexLights = 2,
+    BufferIndexFragmentUniforms = 3
+} BufferIndices;
+
+typedef enum {
+    BaseColorTexture = 0
+} Texture;
 #endif /* Common_h */

@@ -38,16 +38,16 @@ class ModelsService {
         do {
             let modelData = try Data(contentsOf: fileUrl)
             saveModelData(fileName: fileUrl.pathComponents.last ?? name, fileData: modelData)
-            models.append(Model(assetUrl: DocumentService.getModelsDirectory().appendingPathComponent(fileUrl.pathComponents.last ?? name), modelName: name))
+//            models.append(Model(assetUrl: DocumentService.getModelsDirectory().appendingPathComponent(fileUrl.pathComponents.last ?? name), modelName: name))
         } catch {
             print(error.localizedDescription)
         }
     }
     
     func fetchDefaultModels() {
-        guard let stairsUrl = Bundle.main.url(forResource: "stairs.obj", withExtension: nil),
-              let portalUrl = Bundle.main.url(forResource: "portal.obj", withExtension: nil),
-              let magicUrl = Bundle.main.url(forResource: "magic.obj", withExtension: nil) else {
+        guard let stairsUrl = Bundle.main.url(forResource: "portal_stairs.obj", withExtension: nil),
+              let portalUrl = Bundle.main.url(forResource: "portal_base.obj", withExtension: nil),
+              let magicUrl = Bundle.main.url(forResource: "portal_rings.obj", withExtension: nil) else {
             fatalError("Models not found")
         }
         addNewModel(name: "stairs", fileUrl: stairsUrl)
