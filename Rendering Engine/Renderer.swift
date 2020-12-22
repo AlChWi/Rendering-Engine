@@ -86,12 +86,8 @@ class Renderer: NSObject {
         metalView.delegate = self
         
         // add the model to the scene
-        let stairs = Model(name: "stairs.obj")
-        let portal = Model(name: "portal.obj")
-        let magic = Model(name: "magic.obj")
-        models.append(stairs)
-        models.append(portal)
-        models.append(magic)
+        ModelsService.shared.fetchDefaultModels()
+        models.append(contentsOf: ModelsService.shared.models)
         lights.append(sunlight)
         lights.append(ambientLight)
         lights.append(pointLight)

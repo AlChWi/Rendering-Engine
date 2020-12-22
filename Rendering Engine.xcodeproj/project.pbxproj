@@ -33,6 +33,9 @@
 		9BF08788258971300042094D /* stairs.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877E258971300042094D /* stairs.obj */; };
 		9BF08789258971300042094D /* portal.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0877F258971300042094D /* portal.obj */; };
 		9BF08791258971460042094D /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0878E258971460042094D /* MathLibrary.swift */; };
+		CE53E858258B87F0007B2EF2 /* ModelsService+FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */; };
+		CE53E86A258BB534007B2EF2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53E868258BB534007B2EF2 /* ModelPreview.swift */; };
+		CE53E86B258BB534007B2EF2 /* ModelPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE53E869258BB534007B2EF2 /* ModelPreview.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		9BF0877E258971300042094D /* stairs.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stairs.obj; sourceTree = "<group>"; };
 		9BF0877F258971300042094D /* portal.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal.obj; sourceTree = "<group>"; };
 		9BF0878E258971460042094D /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
+		CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelsService+FileService.swift"; sourceTree = "<group>"; };
+		CE53E868258BB534007B2EF2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
+		CE53E869258BB534007B2EF2 /* ModelPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelPreview.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				9BF08775258971300042094D /* Models */,
 				9BF0874725896E0B0042094D /* AppDelegate.swift */,
 				9BF0874925896E0B0042094D /* ViewController.swift */,
+				CE53E857258B87F0007B2EF2 /* ModelsService+FileService.swift */,
 				9BF0875925896F6D0042094D /* Renderer.swift */,
 				9BF0875C258970700042094D /* Shaders.metal */,
 				9BF0875F258970B60042094D /* Primitive.swift */,
@@ -116,6 +123,8 @@
 				9BF0874D25896E0E0042094D /* Main.storyboard */,
 				9BF0875025896E0E0042094D /* Info.plist */,
 				9BF0875125896E0E0042094D /* Rendering_Engine.entitlements */,
+				CE53E868258BB534007B2EF2 /* ModelPreview.swift */,
+				CE53E869258BB534007B2EF2 /* ModelPreview.xib */,
 			);
 			path = "Rendering Engine";
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 				9BF08787258971300042094D /* train.mtl in Resources */,
 				9BF08785258971300042094D /* treefir.obj in Resources */,
 				9BF08789258971300042094D /* portal.obj in Resources */,
+				CE53E86B258BB534007B2EF2 /* ModelPreview.xib in Resources */,
 				9BF0874F25896E0E0042094D /* Main.storyboard in Resources */,
 				9BF08781258971300042094D /* treefir.mtl in Resources */,
 			);
@@ -234,12 +244,14 @@
 				9BF08764258970BE0042094D /* Node.swift in Sources */,
 				9BD857FC258A961E007D0515 /* DebugLights.metal in Sources */,
 				9BF0874825896E0B0042094D /* AppDelegate.swift in Sources */,
+				CE53E858258B87F0007B2EF2 /* ModelsService+FileService.swift in Sources */,
 				9BF08767258970C30042094D /* Camera.swift in Sources */,
 				9BF0876D258970CC0042094D /* Mesh.swift in Sources */,
 				9BF08770258970D10042094D /* Submesh.swift in Sources */,
 				9BF08760258970B60042094D /* Primitive.swift in Sources */,
 				9BD857FD258A961E007D0515 /* DebugLights.swift in Sources */,
 				9BF0876A258970C70042094D /* Model.swift in Sources */,
+				CE53E86A258BB534007B2EF2 /* ModelPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -380,9 +392,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Rendering Engine/Rendering_Engine.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8CTGEUBGR5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Rendering Engine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -401,9 +414,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Rendering Engine/Rendering_Engine.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8CTGEUBGR5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Rendering Engine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
