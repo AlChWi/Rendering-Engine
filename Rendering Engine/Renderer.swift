@@ -9,6 +9,7 @@ class Renderer: NSObject {
     
     var uniforms = Uniforms()
     var fragmentUniforms = FragmentUniforms()
+    let lighting = Lighting()
     
     let depthStencilState: MTLDepthStencilState
     
@@ -22,61 +23,24 @@ class Renderer: NSObject {
     
     // Array of Models allows for rendering multiple models
     var models: [Model] = []
-    var lights: [Light] = []
-    
-    lazy var sunlight: Light = {
-        var light = buildDefaultLight()
-        light.position = [5, 5, -5]
-        return light
-    }()
-    
-    lazy var ambientLight: Light = {
-        var light = buildDefaultLight()
-        light.color = [0.5, 1, 0]
-        light.intensity = 0.1
-        light.type = Ambientlight
-        return light
-    }()
-    
-    lazy var pointLight: Light = {
-        var light = buildDefaultLight()
-        light.position = [0, 0.5, -0.5]
-        light.color = [1, 0, 0]
-        light.attenuation = float3(1, 1, 1)
-        light.type = Pointlight
-        return light
-    }()
-    
-    lazy var spotLight: Light = {
-        var light = buildDefaultLight()
-        light.position = [0, 1.3, 0.4]
-        light.color = [1, 0, 1]
-        light.attenuation = float3(1, 0.5, 0)
-        light.type = Spotlight
-        light.coneAngle = Float(40).degreesToRadians
-        light.coneDirection = [-1.2, 0, -1.5]
-        light.coneAttenuation = 12
-        
-        return light
-    }()
     
     // Debug drawing of lights
     lazy var lightPipelineState: MTLRenderPipelineState = {
         return buildLightPipelineState()
     }()
     
-    
     init(metalView: MTKView) {
         guard
             let device = MTLCreateSystemDefaultDevice(),
             let commandQueue = device.makeCommandQueue() else {
-            fatalError("GPU not available")
+                fatalError("GPU not available")
         }
         Renderer.device = device
         Renderer.commandQueue = commandQueue
         Renderer.library = device.makeDefaultLibrary()
         metalView.device = device
         metalView.depthStencilPixelFormat = .depth32Float
+        
         depthStencilState = Renderer.buildDepthStencilState()
         super.init()
         metalView.clearColor = MTLClearColor(red: 0,
@@ -88,13 +52,20 @@ class Renderer: NSObject {
         // add the model to the scene
         ModelsService.shared.fetchDefaultModels()
         models.append(contentsOf: ModelsService.shared.models)
-        lights.append(sunlight)
-        lights.append(ambientLight)
-        lights.append(pointLight)
-        lights.append(spotLight)
         
-        fragmentUniforms.lightCouunt = UInt32(lights.count)
+        fragmentUniforms.lightCount = lighting.count
         mtkView(metalView, drawableSizeWillChange: metalView.bounds.size)
+        
+        // models
+        let house = Model(name: "lowpoly-house.obj")
+        house.position = [0, 0, 0]
+        house.rotation = [0, Float(45).degreesToRadians, 0]
+        models.append(house)
+        
+        let ground = Model(name: "plane.obj")
+        ground.scale = [40, 40, 40]
+        ground.tiling = 34
+        models.append(ground)
     }
     
     static func buildDepthStencilState() -> MTLDepthStencilState {
@@ -102,17 +73,6 @@ class Renderer: NSObject {
         descriptor.depthCompareFunction = .less
         descriptor.isDepthWriteEnabled = true
         return Renderer.device.makeDepthStencilState(descriptor: descriptor)!
-    }
-    
-    func buildDefaultLight() -> Light {
-        var light = Light()
-        light.position = [0, 0, 0]
-        light.color = [1, 1, 1]
-        light.specularColor = [0.6, 0.6, 0.6]
-        light.intensity = 1
-        light.attenuation = float3(1, 0, 0)
-        light.type = Sunlight
-        return light
     }
 }
 
@@ -126,29 +86,37 @@ extension Renderer: MTKViewDelegate {
             let descriptor = view.currentRenderPassDescriptor,
             let commandBuffer = Renderer.commandQueue.makeCommandBuffer(),
             let renderEncoder =
-                commandBuffer.makeRenderCommandEncoder(descriptor: descriptor) else {
-            return
+            commandBuffer.makeRenderCommandEncoder(descriptor: descriptor) else {
+                return
         }
+        
         renderEncoder.setDepthStencilState(depthStencilState)
         
         uniforms.projectionMatrix = camera.projectionMatrix
         uniforms.viewMatrix = camera.viewMatrix
         fragmentUniforms.cameraPosition = camera.position
         
+        var lights = lighting.lights
+        renderEncoder.setFragmentBytes(&lights,
+                                       length: MemoryLayout<Light>.stride * lights.count,
+                                       index: Int(BufferIndexLights.rawValue))
+        
         // render all the models in the array
         for model in models {
-            // model matrix now comes from the Model's superclass: Node
-            uniforms.modelMatrix = model.modelMatrix
-            uniforms.normalMatrix = model.modelMatrix.upperLeft
             
-            renderEncoder.setVertexBytes(&uniforms,
-                                         length: MemoryLayout<Uniforms>.stride, index: 1)
-            renderEncoder.setFragmentBytes(&lights,
-                                           length: MemoryLayout<Light>.stride * lights.count,
-                                           index: 2)
+            // add tiling here
+            
+            uniforms.modelMatrix = model.modelMatrix
+            uniforms.normalMatrix = uniforms.modelMatrix.upperLeft
+            fragmentUniforms.tiling = model.tiling
             renderEncoder.setFragmentBytes(&fragmentUniforms,
                                            length: MemoryLayout<FragmentUniforms>.stride,
-                                           index: 3)
+                                           index: Int(BufferIndexFragmentUniforms.rawValue))
+            renderEncoder.setFragmentSamplerState(model.samplerState, index: 0)
+            renderEncoder.setVertexBytes(&uniforms,
+                                         length: MemoryLayout<Uniforms>.stride,
+                                         index: Int(BufferIndexUniforms.rawValue))
+            
             renderEncoder.setRenderPipelineState(model.pipelineState)
             
             for mesh in model.meshes {
@@ -157,6 +125,9 @@ extension Renderer: MTKViewDelegate {
                                               index: 0)
                 
                 for submesh in mesh.submeshes {
+                    
+                    // set the fragment texture here
+                    renderEncoder.setFragmentTexture(submesh.texture.baseColor, index: Int(BaseColorTexture.rawValue))
                     let mtkSubmesh = submesh.mtkSubmesh
                     renderEncoder.drawIndexedPrimitives(type: .triangle,
                                                         indexCount: mtkSubmesh.indexCount,
@@ -168,7 +139,6 @@ extension Renderer: MTKViewDelegate {
         }
         
         debugLights(renderEncoder: renderEncoder, lightType: Pointlight)
-        debugLights(renderEncoder: renderEncoder, lightType: Spotlight)
         renderEncoder.endEncoding()
         guard let drawable = view.currentDrawable else {
             return
