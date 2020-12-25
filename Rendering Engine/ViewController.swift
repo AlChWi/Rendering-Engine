@@ -98,12 +98,32 @@ extension ViewController: NSCollectionViewDataSource, NSCollectionViewDelegate {
 
 extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 0
+        return (renderer?.lights.count ?? 0) + (renderer?.models.count ?? 0)
     }
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        return nil
+        guard let renderer = renderer else { return nil }
+        if renderer.models.isEmpty {
+            return "light \(row)"
+        }
+        if row > renderer.models.count - 1 {
+            return "light \(row - renderer.models.count)"
+        }
+        return "model \(renderer.models[row].name)"
     }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard let renderer = renderer else { return nil }
+        if renderer.models.isEmpty {
+            return NSTextField(labelWithString: "light \(row)")
+        }
+        if row > renderer.models.count - 1 {
+            return NSTextField(labelWithString: "light \(row - renderer.models.count)")
+        }
+        return NSTextField(labelWithString: "model \(renderer.models[row].name)")
+    }
+    
+    func tableVi
 }
 
 extension ViewController: NSOutlineViewDataSource, NSOutlineViewDelegate {
