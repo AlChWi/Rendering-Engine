@@ -38,21 +38,35 @@ class ModelsService {
         do {
             let modelData = try Data(contentsOf: fileUrl)
             saveModelData(fileName: fileUrl.pathComponents.last ?? name, fileData: modelData)
-//            models.append(Model(assetUrl: DocumentService.getModelsDirectory().appendingPathComponent(fileUrl.pathComponents.last ?? name), modelName: name))
+            models.append(Model(assetUrl: DocumentService.getModelsDirectory().appendingPathComponent(fileUrl.pathComponents.last ?? name), modelName: name))
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    func fetchDefaultModels() {
+    func fetchNewModel(name: String, fileUrl: URL) -> Model? {
+        do {
+            let modelData = try Data(contentsOf: fileUrl)
+            saveModelData(fileName: fileUrl.pathComponents.last ?? name, fileData: modelData)
+            return Model(assetUrl: DocumentService.getModelsDirectory().appendingPathComponent(fileUrl.pathComponents.last ?? name), modelName: name)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+    
+    func fetchDefaultModels() -> [Model] {
         guard let stairsUrl = Bundle.main.url(forResource: "portal_stairs.obj", withExtension: nil),
               let portalUrl = Bundle.main.url(forResource: "portal_base.obj", withExtension: nil),
               let magicUrl = Bundle.main.url(forResource: "portal_rings.obj", withExtension: nil) else {
             fatalError("Models not found")
         }
-        addNewModel(name: "stairs", fileUrl: stairsUrl)
-        addNewModel(name: "portal", fileUrl: portalUrl)
-        addNewModel(name: "magic", fileUrl: magicUrl)
+        if let stairs = fetchNewModel(name: "stairs", fileUrl: stairsUrl),
+           let portal = fetchNewModel(name: "portal", fileUrl: portalUrl),
+           let magic = fetchNewModel(name: "magic", fileUrl: magicUrl) {
+            return [stairs, portal, magic]
+        }
+        return []
     }
 }
 

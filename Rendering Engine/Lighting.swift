@@ -33,7 +33,7 @@ struct Lighting {
         return light
     }()
     
-    let lights: [Light]
+    var lights: [Light]
     let count: UInt32
     
     init() {

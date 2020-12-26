@@ -9,7 +9,7 @@ class Renderer: NSObject {
     
     var uniforms = Uniforms()
     var fragmentUniforms = FragmentUniforms()
-    let lighting = Lighting()
+    var lighting = Lighting()
     
     let depthStencilState: MTLDepthStencilState
     
@@ -50,8 +50,7 @@ class Renderer: NSObject {
         metalView.delegate = self
         
         // add the model to the scene
-        ModelsService.shared.fetchDefaultModels()
-        models.append(contentsOf: ModelsService.shared.models)
+        models.append(contentsOf: ModelsService.shared.fetchDefaultModels())
         
         fragmentUniforms.lightCount = lighting.count
         mtkView(metalView, drawableSizeWillChange: metalView.bounds.size)

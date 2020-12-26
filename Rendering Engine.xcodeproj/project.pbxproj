@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B6067F625967E8000A6A0F9 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E025967E7F00A6A0F9 /* plane.obj */; };
+		9B6067F725967E8000A6A0F9 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E125967E7F00A6A0F9 /* plane.mtl */; };
+		9B6067F825967E8000A6A0F9 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E225967E7F00A6A0F9 /* ground.png */; };
+		9B6067F925967E8000A6A0F9 /* lowpoly-house-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E425967E7F00A6A0F9 /* lowpoly-house-color.png */; };
+		9B6067FA25967E8000A6A0F9 /* lowpoly-house.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E525967E7F00A6A0F9 /* lowpoly-house.obj */; };
+		9B6067FB25967E8000A6A0F9 /* lowpoly-house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E625967E7F00A6A0F9 /* lowpoly-house.mtl */; };
+		9B6067FC25967E8000A6A0F9 /* portal_rings.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E825967E7F00A6A0F9 /* portal_rings.mtl */; };
+		9B6067FD25967E8000A6A0F9 /* portal_rings.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067E925967E7F00A6A0F9 /* portal_rings.png */; };
+		9B6067FE25967E8000A6A0F9 /* portal_rings.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067EA25967E7F00A6A0F9 /* portal_rings.obj */; };
+		9B6067FF25967E8000A6A0F9 /* portal_stairs.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067EC25967E7F00A6A0F9 /* portal_stairs.png */; };
+		9B60680025967E8000A6A0F9 /* portal_stairs.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067ED25967E7F00A6A0F9 /* portal_stairs.obj */; };
+		9B60680125967E8000A6A0F9 /* portal_stairs.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067EE25967E7F00A6A0F9 /* portal_stairs.mtl */; };
+		9B60680225967E8000A6A0F9 /* barn-ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067F025967E7F00A6A0F9 /* barn-ground.png */; };
+		9B60680325967E8000A6A0F9 /* lowpoly-barn-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067F125967E7F00A6A0F9 /* lowpoly-barn-color.png */; };
+		9B60680425967E8000A6A0F9 /* portal_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067F325967E8000A6A0F9 /* portal_base.png */; };
+		9B60680525967E8000A6A0F9 /* portal_base.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067F425967E8000A6A0F9 /* portal_base.obj */; };
+		9B60680625967E8000A6A0F9 /* portal_base.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9B6067F525967E8000A6A0F9 /* portal_base.mtl */; };
+		9B60680A25967F6A00A6A0F9 /* RenderItemsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B60680925967F6A00A6A0F9 /* RenderItemsSettings.swift */; };
+		9B60680E2596AD4300A6A0F9 /* SettingsChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B60680C2596AD4300A6A0F9 /* SettingsChangeViewController.swift */; };
+		9B60680F2596AD4300A6A0F9 /* SettingsChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B60680D2596AD4300A6A0F9 /* SettingsChangeViewController.xib */; };
+		9B6068122596C9B400A6A0F9 /* TouchThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6068112596C9B400A6A0F9 /* TouchThroughView.swift */; };
 		9BD857FC258A961E007D0515 /* DebugLights.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9BD857FA258A961E007D0515 /* DebugLights.metal */; };
 		9BD857FD258A961E007D0515 /* DebugLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD857FB258A961E007D0515 /* DebugLights.swift */; };
 		9BF0874825896E0B0042094D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0874725896E0B0042094D /* AppDelegate.swift */; };
@@ -23,23 +44,6 @@
 		9BF08770258970D10042094D /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0876F258970D10042094D /* Submesh.swift */; };
 		9BF08773258970D50042094D /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF08772258970D50042094D /* VertexDescriptor.swift */; };
 		9BF08791258971460042094D /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0878E258971460042094D /* MathLibrary.swift */; };
-		BDE6CC8A2592B62800A8E5D7 /* portal_rings.mtl in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC742592B62800A8E5D7 /* portal_rings.mtl */; };
-		BDE6CC8B2592B62800A8E5D7 /* portal_rings.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC752592B62800A8E5D7 /* portal_rings.png */; };
-		BDE6CC8C2592B62800A8E5D7 /* portal_rings.obj in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC762592B62800A8E5D7 /* portal_rings.obj */; };
-		BDE6CC8D2592B62800A8E5D7 /* portal_base.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC782592B62800A8E5D7 /* portal_base.png */; };
-		BDE6CC8E2592B62800A8E5D7 /* portal_base.obj in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC792592B62800A8E5D7 /* portal_base.obj */; };
-		BDE6CC8F2592B62800A8E5D7 /* portal_base.mtl in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC7A2592B62800A8E5D7 /* portal_base.mtl */; };
-		BDE6CC902592B62800A8E5D7 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC7C2592B62800A8E5D7 /* plane.obj */; };
-		BDE6CC912592B62800A8E5D7 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC7D2592B62800A8E5D7 /* plane.mtl */; };
-		BDE6CC922592B62800A8E5D7 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC7E2592B62800A8E5D7 /* ground.png */; };
-		BDE6CC932592B62800A8E5D7 /* lowpoly-house-color.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC802592B62800A8E5D7 /* lowpoly-house-color.png */; };
-		BDE6CC942592B62800A8E5D7 /* lowpoly-house.obj in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC812592B62800A8E5D7 /* lowpoly-house.obj */; };
-		BDE6CC952592B62800A8E5D7 /* lowpoly-house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC822592B62800A8E5D7 /* lowpoly-house.mtl */; };
-		BDE6CC962592B62800A8E5D7 /* barn-ground.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC842592B62800A8E5D7 /* barn-ground.png */; };
-		BDE6CC972592B62800A8E5D7 /* lowpoly-barn-color.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC852592B62800A8E5D7 /* lowpoly-barn-color.png */; };
-		BDE6CC982592B62800A8E5D7 /* portal_stairs.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC872592B62800A8E5D7 /* portal_stairs.png */; };
-		BDE6CC992592B62800A8E5D7 /* portal_stairs.obj in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC882592B62800A8E5D7 /* portal_stairs.obj */; };
-		BDE6CC9A2592B62800A8E5D7 /* portal_stairs.mtl in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC892592B62800A8E5D7 /* portal_stairs.mtl */; };
 		BDE6CC9C2592B6E900A8E5D7 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6CC9B2592B6E900A8E5D7 /* Lighting.swift */; };
 		BDE6CC9E2592BA4600A8E5D7 /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6CC9D2592BA4600A8E5D7 /* Texturable.swift */; };
 		BDE6CCA02592BB6B00A8E5D7 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE6CC9F2592BB6B00A8E5D7 /* Textures.xcassets */; };
@@ -49,6 +53,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B6067E025967E7F00A6A0F9 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
+		9B6067E125967E7F00A6A0F9 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.mtl; sourceTree = "<group>"; };
+		9B6067E225967E7F00A6A0F9 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
+		9B6067E425967E7F00A6A0F9 /* lowpoly-house-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lowpoly-house-color.png"; sourceTree = "<group>"; };
+		9B6067E525967E7F00A6A0F9 /* lowpoly-house.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "lowpoly-house.obj"; sourceTree = "<group>"; };
+		9B6067E625967E7F00A6A0F9 /* lowpoly-house.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "lowpoly-house.mtl"; sourceTree = "<group>"; };
+		9B6067E825967E7F00A6A0F9 /* portal_rings.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_rings.mtl; sourceTree = "<group>"; };
+		9B6067E925967E7F00A6A0F9 /* portal_rings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portal_rings.png; sourceTree = "<group>"; };
+		9B6067EA25967E7F00A6A0F9 /* portal_rings.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_rings.obj; sourceTree = "<group>"; };
+		9B6067EC25967E7F00A6A0F9 /* portal_stairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portal_stairs.png; sourceTree = "<group>"; };
+		9B6067ED25967E7F00A6A0F9 /* portal_stairs.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_stairs.obj; sourceTree = "<group>"; };
+		9B6067EE25967E7F00A6A0F9 /* portal_stairs.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_stairs.mtl; sourceTree = "<group>"; };
+		9B6067F025967E7F00A6A0F9 /* barn-ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barn-ground.png"; sourceTree = "<group>"; };
+		9B6067F125967E7F00A6A0F9 /* lowpoly-barn-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lowpoly-barn-color.png"; sourceTree = "<group>"; };
+		9B6067F325967E8000A6A0F9 /* portal_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portal_base.png; sourceTree = "<group>"; };
+		9B6067F425967E8000A6A0F9 /* portal_base.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_base.obj; sourceTree = "<group>"; };
+		9B6067F525967E8000A6A0F9 /* portal_base.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_base.mtl; sourceTree = "<group>"; };
+		9B60680925967F6A00A6A0F9 /* RenderItemsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderItemsSettings.swift; sourceTree = "<group>"; };
+		9B60680C2596AD4300A6A0F9 /* SettingsChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangeViewController.swift; sourceTree = "<group>"; };
+		9B60680D2596AD4300A6A0F9 /* SettingsChangeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsChangeViewController.xib; sourceTree = "<group>"; };
+		9B6068112596C9B400A6A0F9 /* TouchThroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchThroughView.swift; sourceTree = "<group>"; };
 		9BD857FA258A961E007D0515 /* DebugLights.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DebugLights.metal; sourceTree = "<group>"; };
 		9BD857FB258A961E007D0515 /* DebugLights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLights.swift; sourceTree = "<group>"; };
 		9BF0874425896E0B0042094D /* Rendering Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rendering Engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,23 +94,6 @@
 		9BF0876F258970D10042094D /* Submesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		9BF08772258970D50042094D /* VertexDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
 		9BF0878E258971460042094D /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
-		BDE6CC742592B62800A8E5D7 /* portal_rings.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_rings.mtl; sourceTree = "<group>"; };
-		BDE6CC752592B62800A8E5D7 /* portal_rings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portal_rings.png; sourceTree = "<group>"; };
-		BDE6CC762592B62800A8E5D7 /* portal_rings.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_rings.obj; sourceTree = "<group>"; };
-		BDE6CC782592B62800A8E5D7 /* portal_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portal_base.png; sourceTree = "<group>"; };
-		BDE6CC792592B62800A8E5D7 /* portal_base.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_base.obj; sourceTree = "<group>"; };
-		BDE6CC7A2592B62800A8E5D7 /* portal_base.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_base.mtl; sourceTree = "<group>"; };
-		BDE6CC7C2592B62800A8E5D7 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
-		BDE6CC7D2592B62800A8E5D7 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.mtl; sourceTree = "<group>"; };
-		BDE6CC7E2592B62800A8E5D7 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
-		BDE6CC802592B62800A8E5D7 /* lowpoly-house-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lowpoly-house-color.png"; sourceTree = "<group>"; };
-		BDE6CC812592B62800A8E5D7 /* lowpoly-house.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "lowpoly-house.obj"; sourceTree = "<group>"; };
-		BDE6CC822592B62800A8E5D7 /* lowpoly-house.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "lowpoly-house.mtl"; sourceTree = "<group>"; };
-		BDE6CC842592B62800A8E5D7 /* barn-ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barn-ground.png"; sourceTree = "<group>"; };
-		BDE6CC852592B62800A8E5D7 /* lowpoly-barn-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lowpoly-barn-color.png"; sourceTree = "<group>"; };
-		BDE6CC872592B62800A8E5D7 /* portal_stairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portal_stairs.png; sourceTree = "<group>"; };
-		BDE6CC882592B62800A8E5D7 /* portal_stairs.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_stairs.obj; sourceTree = "<group>"; };
-		BDE6CC892592B62800A8E5D7 /* portal_stairs.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portal_stairs.mtl; sourceTree = "<group>"; };
 		BDE6CC9B2592B6E900A8E5D7 /* Lighting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lighting.swift; sourceTree = "<group>"; };
 		BDE6CC9D2592BA4600A8E5D7 /* Texturable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texturable.swift; sourceTree = "<group>"; };
 		BDE6CC9F2592BB6B00A8E5D7 /* Textures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Textures.xcassets; sourceTree = "<group>"; };
@@ -105,6 +113,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B6067DF25967E7F00A6A0F9 /* Ground */ = {
+			isa = PBXGroup;
+			children = (
+				9B6067E025967E7F00A6A0F9 /* plane.obj */,
+				9B6067E125967E7F00A6A0F9 /* plane.mtl */,
+				9B6067E225967E7F00A6A0F9 /* ground.png */,
+			);
+			path = Ground;
+			sourceTree = "<group>";
+		};
+		9B6067E325967E7F00A6A0F9 /* LowPolyHouse */ = {
+			isa = PBXGroup;
+			children = (
+				9B6067E425967E7F00A6A0F9 /* lowpoly-house-color.png */,
+				9B6067E525967E7F00A6A0F9 /* lowpoly-house.obj */,
+				9B6067E625967E7F00A6A0F9 /* lowpoly-house.mtl */,
+			);
+			path = LowPolyHouse;
+			sourceTree = "<group>";
+		};
+		9B6067E725967E7F00A6A0F9 /* Portal Entrance */ = {
+			isa = PBXGroup;
+			children = (
+				9B6067E825967E7F00A6A0F9 /* portal_rings.mtl */,
+				9B6067E925967E7F00A6A0F9 /* portal_rings.png */,
+				9B6067EA25967E7F00A6A0F9 /* portal_rings.obj */,
+			);
+			path = "Portal Entrance";
+			sourceTree = "<group>";
+		};
+		9B6067EB25967E7F00A6A0F9 /* Portal Stairs */ = {
+			isa = PBXGroup;
+			children = (
+				9B6067EC25967E7F00A6A0F9 /* portal_stairs.png */,
+				9B6067ED25967E7F00A6A0F9 /* portal_stairs.obj */,
+				9B6067EE25967E7F00A6A0F9 /* portal_stairs.mtl */,
+			);
+			path = "Portal Stairs";
+			sourceTree = "<group>";
+		};
+		9B6067EF25967E7F00A6A0F9 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				9B6067F025967E7F00A6A0F9 /* barn-ground.png */,
+				9B6067F125967E7F00A6A0F9 /* lowpoly-barn-color.png */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		9B6067F225967E8000A6A0F9 /* Portal Base */ = {
+			isa = PBXGroup;
+			children = (
+				9B6067F325967E8000A6A0F9 /* portal_base.png */,
+				9B6067F425967E8000A6A0F9 /* portal_base.obj */,
+				9B6067F525967E8000A6A0F9 /* portal_base.mtl */,
+			);
+			path = "Portal Base";
+			sourceTree = "<group>";
+		};
 		9BF0873B25896E0A0042094D = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +215,10 @@
 				9BF0875125896E0E0042094D /* Rendering_Engine.entitlements */,
 				CE53E868258BB534007B2EF2 /* ModelPreview.swift */,
 				CE53E869258BB534007B2EF2 /* ModelPreview.xib */,
+				9B60680925967F6A00A6A0F9 /* RenderItemsSettings.swift */,
+				9B60680C2596AD4300A6A0F9 /* SettingsChangeViewController.swift */,
+				9B60680D2596AD4300A6A0F9 /* SettingsChangeViewController.xib */,
+				9B6068112596C9B400A6A0F9 /* TouchThroughView.swift */,
 			);
 			path = "Rendering Engine";
 			sourceTree = "<group>";
@@ -155,12 +226,12 @@
 		9BF08775258971300042094D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BDE6CC732592B62800A8E5D7 /* Portal Entrance */,
-				BDE6CC772592B62800A8E5D7 /* Portal Base */,
-				BDE6CC862592B62800A8E5D7 /* Portal Stairs */,
-				BDE6CC7B2592B62800A8E5D7 /* Ground */,
-				BDE6CC7F2592B62800A8E5D7 /* LowPolyHouse */,
-				BDE6CC832592B62800A8E5D7 /* Textures */,
+				9B6067DF25967E7F00A6A0F9 /* Ground */,
+				9B6067E325967E7F00A6A0F9 /* LowPolyHouse */,
+				9B6067F225967E8000A6A0F9 /* Portal Base */,
+				9B6067E725967E7F00A6A0F9 /* Portal Entrance */,
+				9B6067EB25967E7F00A6A0F9 /* Portal Stairs */,
+				9B6067EF25967E7F00A6A0F9 /* Textures */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,71 +244,6 @@
 				9BD857FB258A961E007D0515 /* DebugLights.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		BDE6CC732592B62800A8E5D7 /* Portal Entrance */ = {
-			isa = PBXGroup;
-			children = (
-				BDE6CC742592B62800A8E5D7 /* portal_rings.mtl */,
-				BDE6CC752592B62800A8E5D7 /* portal_rings.png */,
-				BDE6CC762592B62800A8E5D7 /* portal_rings.obj */,
-			);
-			name = "Portal Entrance";
-			path = "../../../../Downloads/Texture/Texture/Models/Portal Entrance";
-			sourceTree = "<group>";
-		};
-		BDE6CC772592B62800A8E5D7 /* Portal Base */ = {
-			isa = PBXGroup;
-			children = (
-				BDE6CC782592B62800A8E5D7 /* portal_base.png */,
-				BDE6CC792592B62800A8E5D7 /* portal_base.obj */,
-				BDE6CC7A2592B62800A8E5D7 /* portal_base.mtl */,
-			);
-			name = "Portal Base";
-			path = "../../../../Downloads/Texture/Texture/Models/Portal Base";
-			sourceTree = "<group>";
-		};
-		BDE6CC7B2592B62800A8E5D7 /* Ground */ = {
-			isa = PBXGroup;
-			children = (
-				BDE6CC7C2592B62800A8E5D7 /* plane.obj */,
-				BDE6CC7D2592B62800A8E5D7 /* plane.mtl */,
-				BDE6CC7E2592B62800A8E5D7 /* ground.png */,
-			);
-			name = Ground;
-			path = ../../../../Downloads/Texture/Texture/Models/Ground;
-			sourceTree = "<group>";
-		};
-		BDE6CC7F2592B62800A8E5D7 /* LowPolyHouse */ = {
-			isa = PBXGroup;
-			children = (
-				BDE6CC802592B62800A8E5D7 /* lowpoly-house-color.png */,
-				BDE6CC812592B62800A8E5D7 /* lowpoly-house.obj */,
-				BDE6CC822592B62800A8E5D7 /* lowpoly-house.mtl */,
-			);
-			name = LowPolyHouse;
-			path = ../../../../Downloads/Texture/Texture/Models/LowPolyHouse;
-			sourceTree = "<group>";
-		};
-		BDE6CC832592B62800A8E5D7 /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				BDE6CC842592B62800A8E5D7 /* barn-ground.png */,
-				BDE6CC852592B62800A8E5D7 /* lowpoly-barn-color.png */,
-			);
-			name = Textures;
-			path = ../../../../Downloads/Texture/Texture/Models/Textures;
-			sourceTree = "<group>";
-		};
-		BDE6CC862592B62800A8E5D7 /* Portal Stairs */ = {
-			isa = PBXGroup;
-			children = (
-				BDE6CC872592B62800A8E5D7 /* portal_stairs.png */,
-				BDE6CC882592B62800A8E5D7 /* portal_stairs.obj */,
-				BDE6CC892592B62800A8E5D7 /* portal_stairs.mtl */,
-			);
-			name = "Portal Stairs";
-			path = "../../../../Downloads/Texture/Texture/Models/Portal Stairs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,27 +303,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE6CC932592B62800A8E5D7 /* lowpoly-house-color.png in Resources */,
-				BDE6CC962592B62800A8E5D7 /* barn-ground.png in Resources */,
-				BDE6CC922592B62800A8E5D7 /* ground.png in Resources */,
+				9B60680125967E8000A6A0F9 /* portal_stairs.mtl in Resources */,
+				9B60680025967E8000A6A0F9 /* portal_stairs.obj in Resources */,
 				9BF0874C25896E0E0042094D /* Assets.xcassets in Resources */,
-				BDE6CC8D2592B62800A8E5D7 /* portal_base.png in Resources */,
-				BDE6CC972592B62800A8E5D7 /* lowpoly-barn-color.png in Resources */,
-				BDE6CC902592B62800A8E5D7 /* plane.obj in Resources */,
+				9B60680225967E8000A6A0F9 /* barn-ground.png in Resources */,
 				CE53E86B258BB534007B2EF2 /* ModelPreview.xib in Resources */,
 				9BF0874F25896E0E0042094D /* Main.storyboard in Resources */,
-				BDE6CC952592B62800A8E5D7 /* lowpoly-house.mtl in Resources */,
-				BDE6CC8E2592B62800A8E5D7 /* portal_base.obj in Resources */,
-				BDE6CC9A2592B62800A8E5D7 /* portal_stairs.mtl in Resources */,
-				BDE6CC992592B62800A8E5D7 /* portal_stairs.obj in Resources */,
-				BDE6CC8F2592B62800A8E5D7 /* portal_base.mtl in Resources */,
-				BDE6CC912592B62800A8E5D7 /* plane.mtl in Resources */,
-				BDE6CC982592B62800A8E5D7 /* portal_stairs.png in Resources */,
-				BDE6CC8B2592B62800A8E5D7 /* portal_rings.png in Resources */,
-				BDE6CC942592B62800A8E5D7 /* lowpoly-house.obj in Resources */,
+				9B6067FB25967E8000A6A0F9 /* lowpoly-house.mtl in Resources */,
+				9B60680425967E8000A6A0F9 /* portal_base.png in Resources */,
+				9B6067FC25967E8000A6A0F9 /* portal_rings.mtl in Resources */,
+				9B6067F625967E8000A6A0F9 /* plane.obj in Resources */,
+				9B6067F925967E8000A6A0F9 /* lowpoly-house-color.png in Resources */,
+				9B60680525967E8000A6A0F9 /* portal_base.obj in Resources */,
+				9B6067F825967E8000A6A0F9 /* ground.png in Resources */,
+				9B6067FA25967E8000A6A0F9 /* lowpoly-house.obj in Resources */,
+				9B60680F2596AD4300A6A0F9 /* SettingsChangeViewController.xib in Resources */,
+				9B6067F725967E8000A6A0F9 /* plane.mtl in Resources */,
+				9B60680625967E8000A6A0F9 /* portal_base.mtl in Resources */,
+				9B6067FE25967E8000A6A0F9 /* portal_rings.obj in Resources */,
+				9B6067FD25967E8000A6A0F9 /* portal_rings.png in Resources */,
+				9B60680325967E8000A6A0F9 /* lowpoly-barn-color.png in Resources */,
 				BDE6CCA02592BB6B00A8E5D7 /* Textures.xcassets in Resources */,
-				BDE6CC8A2592B62800A8E5D7 /* portal_rings.mtl in Resources */,
-				BDE6CC8C2592B62800A8E5D7 /* portal_rings.obj in Resources */,
+				9B6067FF25967E8000A6A0F9 /* portal_stairs.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6068122596C9B400A6A0F9 /* TouchThroughView.swift in Sources */,
+				9B60680A25967F6A00A6A0F9 /* RenderItemsSettings.swift in Sources */,
 				9BF0875D258970700042094D /* Shaders.metal in Sources */,
 				9BF08791258971460042094D /* MathLibrary.swift in Sources */,
 				9BF0874A25896E0B0042094D /* ViewController.swift in Sources */,
 				9BF08773258970D50042094D /* VertexDescriptor.swift in Sources */,
 				9BF0875A25896F6D0042094D /* Renderer.swift in Sources */,
 				9BF08764258970BE0042094D /* Node.swift in Sources */,
+				9B60680E2596AD4300A6A0F9 /* SettingsChangeViewController.swift in Sources */,
 				9BD857FC258A961E007D0515 /* DebugLights.metal in Sources */,
 				BDE6CC9E2592BA4600A8E5D7 /* Texturable.swift in Sources */,
 				9BF0874825896E0B0042094D /* AppDelegate.swift in Sources */,
